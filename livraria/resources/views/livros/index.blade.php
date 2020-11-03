@@ -1,8 +1,8 @@
 <ul>
 @foreach($livros as $livro)
-<li>{{$livro->titulo}}
-{{$livro->idl}}
-{{$livro->idioma}}</li>
+<li>Titulo: {{$livro->titulo}}</li>
+<li>Codigo: {{$livro->idl}}</li>
+    <li>Idioma:  {{$livro->idioma}}</li><br>
 @endforeach
 </ul>
 {{$livros->render()}}

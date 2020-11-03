@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Autor extends Model
 {
     use HasFactory;
+    protected $primaryKey="ida";
+    
+ 
+    protected $table = "autores";
 }
