@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Livro extends Model
+class Edicao extends Model
 {
     use HasFactory;
     //indicar qual a chave primária da tabela Livros
@@ -13,10 +13,5 @@ class Livro extends Model
     
     //esta propriedade não é necessaria
     //mas vai ajudar-nos em situações futuras
-    protected $table = "livros";
-    
-    
-    public function autor(){
-        return $this->belongsTo('App\Models\Autor', 'id_autor');
-    }
+    protected $table = "edicoes";
 }

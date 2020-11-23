@@ -8,7 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Genero extends Model
 {
     use HasFactory;
-        protected $primaryKey="idg";
+        protected $primaryKey="id_genero";
  
     protected $table = "generos";
+    
+    public function livros() {
+        return $this->hasMany('App\Models\Livro', 'id_autor');
+        
+    }
 }

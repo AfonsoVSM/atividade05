@@ -18,11 +18,14 @@ public function index(){
     public function show (Request $request){
         $idLivro = $request->id;
         
-        $livro = Livro::findOrFail($idLivro);
+       // $livro = Livro::findOrFail($idLivro);
+        
+         $livro = Livro::where('id_livro',$idLivro)->with('autor')->first();
         
         return view ('livros.show',[
             'livro'=>$livro
         ]);
+       
     }
 }
 
